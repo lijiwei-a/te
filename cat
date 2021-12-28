@@ -1,0 +1,12 @@
+local args={}
+if not args[1] then
+  print("参数呢？")
+  return
+end
+if fs.exists(path..args[1]) then
+  print(fs.readfile(path..args[1]))
+elseif fs.exists(args[1]) then
+  fs.readfile(path.."/"..args[1])
+else
+  error("file not found")
+end

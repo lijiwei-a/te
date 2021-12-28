@@ -1,0 +1,20 @@
+args={...}
+
+if args[1]:sub(1,1) then
+  if fs.exists(args[1]) then
+    path=args[1]
+  else
+    error("no such directory")
+  end
+end
+if fs.exists(path..args[1]) then
+	if path=="/" then
+    path="/"..args[1]
+  else
+    path=path.."/"..args[1]
+  end
+elseif fs.exists(args[1]) then
+	path=args[1]
+else 
+	error("no such directory")
+end

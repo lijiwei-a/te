@@ -1,0 +1,2 @@
+fs=require("Filesystem")
+load(fs.readfile("/openos.lua"))()

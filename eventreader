@@ -1,0 +1,4 @@
+event=require("Event")
+while true do
+  prints({event.pull()})
+end
